@@ -1,22 +1,130 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #e2e2e2;
 }
 
-.App-link {
-  color: #09d3ac;
+.header {
+  position: relative;
+  height: 60px;
+  justify-content: flex-start;
+  align-content: center;
+  display: flex;
+  padding-left: 15%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.335);
+  z-index: 100;
+}
+.header nav {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.header a {
+  display: inline;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  color: inherit;
+}
+.header img {
+  image-rendering: optimizeSpeed;
+  height: inherit;
+}
+.btn-post {
+  display: inline-flex;
+  background-color: #f56b2a;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  color: white;
+  width: fit-content;
+  height: 65%;
+  border-radius: 0.2em;
+  padding: 0 0.4em;
+  margin: 0.6em 2em;
+  align-self: center;
+}
+.btn-post svg {
+  vertical-align: middle;
+  margin-right: 0.4em;
+}
+.btn-post * {
+  margin: auto;
+  vertical-align: middle;
+}
+.btn-search {
+  display: inline-flex;
+  margin: 0.5em auto;
+  align-self: flex-end;
+  padding: 0.5em;
+}
+.btn-search svg {
+  margin-right: 0.3em;
+}
+.btn-login {
+  display: flex;
+  padding: 0.3em;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.offers .orange-header {
+  position: absolute;
+  background-color: #f56b2a;
+  width: 150%;
+  height: 300px;
+  border-radius: 70%;
+  top: -150px;
+  left: -25%;
+}
+.offers {
+  justify-content: center;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  height: 130px;
+  width: 60%;
+  z-index: 200;
+  margin: 2.2em auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3em;
+}
+.search-box .input {
+  height: fit-content;
+  width: 40%;
+  background-color: #f4f6f7;
+  color: grey;
+  margin: auto 1em;
+  border: none;
+  vertical-align: center;
+}
+.search-box svg {
+  vertical-align: center;
+  align-self: center;
+  padding: 0 0.5em;
+}
+.search-box input {
+  display: inline-flex;
+  height: 40px;
+  width: 70%;
+  border: none;
+  background-color: inherit;
+  text-align: center;
+  margin: 0 1em;
+  font-size: 1rem;
+  outline: none;
+}
+.search-box button {
+  background-color: #4183d7;
+  height: 40px;
+  padding: 0.7em;
+  width: 15%;
+  border-radius: 0.2em;
+  color: white;
+  margin: auto 1em;
 }
