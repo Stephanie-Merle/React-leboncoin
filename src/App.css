@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 body {
   min-height: 100vh;
-  background-color: #e2e2e2;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -40,7 +45,9 @@ body {
   align-content: center;
   align-items: center;
   color: white;
+  font-weight: 700;
   width: fit-content;
+  min-width: 190px;
   height: 65%;
   border-radius: 0.2em;
   padding: 0 0.4em;
@@ -87,16 +94,19 @@ body {
   display: flex;
   background-color: #ffffff;
   height: 130px;
-  width: 60%;
+  width: 50%;
+  min-width: 500px;
   z-index: 200;
   margin: 2.2em auto;
   justify-content: center;
   align-items: center;
   border-radius: 0.3em;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
 }
 .search-box .input {
   height: fit-content;
   width: 40%;
+  min-width: 300px;
   background-color: #f4f6f7;
   color: grey;
   margin: auto 1em;
@@ -124,7 +134,69 @@ body {
   height: 40px;
   padding: 0.7em;
   width: 15%;
+  min-width: 100px;
   border-radius: 0.2em;
   color: white;
   margin: auto 1em;
+}
+.card {
+  display: flex;
+  width: 60%;
+  height: 160px;
+  background-color: white;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
+  margin: 1em auto;
+}
+.card .img {
+  width: 200px;
+  height: 160px;
+  display: inline-flex;
+  background-color: #cad1d9;
+}
+.card img {
+  height: 160px;
+  width: 200px;
+  object-fit: contain;
+  display: inline-flex;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 1em;
+  justify-content: space-between;
+  margin: 1em;
+}
+.card-info div p:nth-child(2) {
+  color: #f56b2a;
+  margin-top: 1em;
+}
+footer {
+  display: flex;
+  background-color: #474747;
+  height: 60px;
+  align-content: center;
+  justify-content: center;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+footer p {
+  display: flex;
+  padding-top: 20px;
+  color: white;
+  font-size: 1rem;
+  justify-content: center;
+}
+.pages {
+  justify-content: center;
+  display: flex;
+}
+.pages div {
+  margin: 1em;
+  padding: 0.5em 0.7em;
+}
+.selected-page {
+  background-color: #f56b2a;
+  border-radius: 0.2em;
 }

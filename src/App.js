@@ -22,6 +22,15 @@ const App = () => {
           </Route>
         </Switch>
       </div>
+      <footer>
+        <p>
+          Made with love ✨
+          <a href="https://github.com/Stephanie-Merle/">
+            ⭐️ CHECK SOURCE CODE HERE ⭐️
+          </a>
+          ✨ Project from Le Reacteur Paris
+        </p>
+      </footer>
     </Router>
   );
 };

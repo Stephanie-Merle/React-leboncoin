@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "./search-icon";
 
-const SearchBox = () => {
+const SearchBox = props => {
   return (
     <div className="search-box">
       <div className="input">
