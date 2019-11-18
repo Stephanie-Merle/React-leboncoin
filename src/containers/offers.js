@@ -56,7 +56,7 @@ const Offers = () => {
   const listing = n.map(el => {
     let url = `/offer/` + data[el]._id;
     return (
-      <Link to={url} className="link">
+      <Link to={url} key={el} className="link">
         <Card key={el} data={{ ...data[el] }} />
       </Link>
     );

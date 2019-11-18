@@ -1,9 +1,10 @@
 # Project
 
-React app 'leboncoin' 
+WIP fell free to contribute if you wish to rescue my CSS 😂
+React app 'leboncoin'
 CI with Netlify >> https://good-deal.netlify.com/
 
- *****
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

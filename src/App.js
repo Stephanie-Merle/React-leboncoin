@@ -6,9 +6,10 @@ import Navbar from "./components/navbar";
 import Offers from "./containers/offers";
 import Offer from "./containers/offer";
 import Modal from "./components/login/modal";
+import SignUp from "./containers/signup";
 
 const App = () => {
-  const [showModal, setModal] = useState(true);
+  const [showModal, setModal] = useState(false);
   return (
     <Router>
       {showModal ? <Modal action={setModal} /> : null}
@@ -20,6 +21,9 @@ const App = () => {
           </Route>
           <Route path="/offer/:id">
             <Offer />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
           </Route>
           <Route path="/">
             <Offers />
