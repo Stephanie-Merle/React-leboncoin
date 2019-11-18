@@ -3,13 +3,17 @@ import SearchIcon from "./search-icon";
 
 const SearchBox = props => {
   return (
-    <div className="search-box">
+    <form className="search-box" onSubmit={() => props.submit}>
       <div className="input">
         <SearchIcon />
-        <input type="text" placeholder="Que recherchez-vous?" />
+        <input
+          type="text"
+          placeholder="Que recherchez-vous?"
+          onChange={props.changingValue}
+        />
       </div>
-      <button>Rechercher</button>
-    </div>
+      <button type="submit">Rechercher</button>
+    </form>
   );
 };
 export default SearchBox;
