@@ -8,7 +8,6 @@ import Axios from "axios";
 const Modal = props => {
   const [user, setUser] = useState({ email: "", password: "" });
   const [inputState, setInput] = useState({ email: "", password: "" });
-  const [userInfo, setUserInfo] = useState({});
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -26,7 +25,6 @@ const Modal = props => {
       }
     );
     console.log(res.data);
-    //setUserInfo(res.data);
   };
 
   return (
