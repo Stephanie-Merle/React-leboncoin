@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./reset.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Offers from "./containers/offers";
 import Offer from "./containers/offer";
+import Modal from "./components/login/modal";
 
 const App = () => {
+  const [showModal, setModal] = useState(true);
   return (
     <Router>
-      <Navbar />
+      {showModal ? <Modal action={setModal} /> : null}
+      <Navbar action={setModal} />
       <div>
         <Switch>
           <Route path="/offers">

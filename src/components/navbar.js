@@ -5,7 +5,7 @@ import Plus from "./btn-plus";
 import SearchIcon from "./search-icon";
 import Login from "../assets/login.svg";
 
-const Navbar = () => {
+const Navbar = props => {
   return (
     <div className="header">
       <img src={Logo} alt="le bon coin logo" />
@@ -24,7 +24,13 @@ const Navbar = () => {
         </Link>
         <div className="btn-login">
           <img src={Login} alt="login" />
-          <Link to="/">Se connecter</Link>
+          <button
+            onClick={() => {
+              props.action(true);
+            }}
+          >
+            Se connecter
+          </button>
         </div>
       </nav>
     </div>
