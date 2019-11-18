@@ -3,7 +3,6 @@ import Style from "./modal.module.css";
 import Backdrop from "./backdrop";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-//import axios from "axios";
 
 const Modal = props => {
   const [inputState, setInput] = useState({ email: "", password: "" });
