@@ -21,16 +21,27 @@ const Navbar = props => {
             <SearchIcon />
             Rechercher
           </div>
+          {props.user ? "Bonjour " + props.user.account.username : null}
         </Link>
         <div className="btn-login">
           <img src={Login} alt="login" />
-          <button
-            onClick={() => {
-              props.action(true);
-            }}
-          >
-            Se connecter
-          </button>
+          {props.user ? (
+            <button
+              onClick={() => {
+                props.close();
+              }}
+            >
+              Se deconnecter
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                props.action(true);
+              }}
+            >
+              Se connecter
+            </button>
+          )}
         </div>
       </nav>
     </div>

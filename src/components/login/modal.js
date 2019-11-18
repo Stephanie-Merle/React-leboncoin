@@ -6,17 +6,14 @@ import Axios from "axios";
 //import axios from "axios";
 
 const Modal = props => {
-  const [user, setUser] = useState({ email: "", password: "" });
   const [inputState, setInput] = useState({ email: "", password: "" });
 
   const handleSubmit = e => {
     e.preventDefault();
-    setUser(inputState);
     userLogin();
   };
 
   const userLogin = async () => {
-    console.log(user);
     const res = await Axios.post(
       "https://leboncoin-api.herokuapp.com/api/user/log_in",
       {
@@ -24,7 +21,8 @@ const Modal = props => {
         password: inputState.password
       }
     );
-    console.log(res.data);
+    props.user(res.data);
+    props.action(false);
   };
 
   return (
