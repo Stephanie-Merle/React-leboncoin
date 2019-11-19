@@ -1,10 +1,11 @@
 import React from "react";
 import SearchIcon from "./search-icon";
+import Style from "./search-box.module.css";
 
 const SearchBox = props => {
   return (
-    <form className="search-box">
-      <div className="input">
+    <form className={Style.searchBox}>
+      <div className={Style.input}>
         <SearchIcon />
         <input
           type="text"

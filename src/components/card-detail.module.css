@@ -1,0 +1,35 @@
+.cardDetail {
+  width: 40%;
+  height: 560px;
+  background-color: white;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
+  margin: 1em auto;
+}
+.cardDetail .img {
+  display: flex;
+  width: 100%;
+  height: 360px;
+  background-color: #cad1d9;
+  justify-content: center;
+}
+.cardDetail img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+
+  margin: auto;
+}
+.cardDetailInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 1em;
+  justify-content: space-between;
+  margin: 1em;
+}
+.cardDetailInfo div:nth-child(2) {
+  color: #f56b2a;
+  margin-top: 1em;
+}
+.cardDetailInfo div:last-child p {
+  margin-top: 5em;
+}
