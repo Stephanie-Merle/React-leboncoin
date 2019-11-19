@@ -21,33 +21,36 @@ const Offers = () => {
   useEffect(() => {
     fetchingAllData();
   }, []);
-
-  useEffect(() => {
-    const fetchingData = async () => {
-      let n = limit * (counter - 1);
-      let url = `https://leboncoin-api.herokuapp.com/api/offer/with-count?skip=${n}&limit=${limit}`;
+  const fetchingData = async () => {
+    let n = limit * (counter - 1);
+    let url = `https://leboncoin-api.herokuapp.com/api/offer/with-count?skip=${n}&limit=${limit}`;
+    try {
       const res = await axios.get(url);
       setData(res.data.offers);
       setLoading(false);
-    };
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  useEffect(() => {
     fetchingData();
   }, [counter]);
 
-  const searchingOffer = search => {
-    // e.preventDefault();
-    // console.log(e.target.value);
-
-    const deepClone = JSON.parse(JSON.stringify({ ...results }));
-    if (searchingData) {
-      let research = new RegExp(searchingData);
-      let myResult = deepClone.filter(el => research.test(el.title));
+  const searchingOffer = e => {
+    e.preventDefault();
+    setLoading(true);
+    if (searchingData !== null) {
+      let research = new RegExp(searchingData, "i");
+      let myResults = results.filter(el => research.test(el.title));
       //return setData(myResult);
-      console.log(myResult);
+      setData(myResults);
+      return setLoading(false);
     } else {
       fetchingAllData();
+      fetchingData();
       // tmp variable for immutability
-      let myCount = counter;
-      return setCounter(myCount);
+      setCounter(1);
+      return setLoading(false);
     }
   };
 
@@ -62,29 +65,36 @@ const Offers = () => {
     );
   });
   // getting all pages for navigation purpose
-  let pages = [];
-  let p = Object.keys(results);
-  const numberOfPages = Math.ceil(p.length / limit);
-  for (let i = 0; i < numberOfPages; i++) {
-    pages = [...pages, i];
-  }
-  const displayPages = pages.map(el => {
-    // adjustment since map start with 0 but counter with 1
-    let myPage = el + 1;
-    return (
-      <div
-        key={el}
-        className={myPage === counter ? "selected-page" : null}
-        onClick={() => setCounter(el + 1)}
-      >
-        {el + 1}
-      </div>
-    );
-  });
+  let displayPages;
+  const countingPages = obj => {
+    let pages = [];
+    let p = Object.keys(obj);
+    const numberOfPages = Math.ceil(p.length / limit);
+    for (let i = 0; i < numberOfPages; i++) {
+      pages = [...pages, i];
+    }
+    displayPages = pages.map(el => {
+      // adjustment since map start with 0 but counter with 1
+      let myPage = el + 1;
+      return (
+        <div
+          key={el}
+          className={myPage === counter ? "selected-page" : null}
+          onClick={() => setCounter(el + 1)}
+        >
+          {el + 1}
+        </div>
+      );
+    });
+    return displayPages;
+  };
+  countingPages(results);
+
+  // get input from search bar
   const handleChange = e => {
     setSearchingData(e.target.value);
-    console.log(searchingData);
   };
+
   return (
     <div className="offers">
       <div className="orange-header" />

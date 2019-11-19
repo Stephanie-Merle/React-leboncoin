@@ -13,15 +13,19 @@ const Modal = props => {
   };
 
   const userLogin = async () => {
-    const res = await Axios.post(
-      "https://leboncoin-api.herokuapp.com/api/user/log_in",
-      {
-        email: inputState.email,
-        password: inputState.password
-      }
-    );
-    props.user(res.data);
-    props.action(false);
+    try {
+      const res = await Axios.post(
+        "https://leboncoin-api.herokuapp.com/api/user/log_in",
+        {
+          email: inputState.email,
+          password: inputState.password
+        }
+      );
+      props.user(res.data);
+      props.action(false);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
@@ -60,10 +64,10 @@ const Modal = props => {
             type="submit"
             className={Style.btnBlue}
           >
-            Se connecter
+            <p>Se connecter</p>
           </button>
           <hr />
-          <p>Vous n'avez pas de compte ?</p>
+          <p className={Style.noAccount}>Vous n'avez pas de compte ?</p>
           <Link
             to="/signup"
             onClick={() => {

@@ -3,7 +3,7 @@ import SearchIcon from "./search-icon";
 
 const SearchBox = props => {
   return (
-    <form className="search-box" onSubmit={() => props.submit}>
+    <form className="search-box">
       <div className="input">
         <SearchIcon />
         <input
@@ -12,7 +12,9 @@ const SearchBox = props => {
           onChange={props.changingValue}
         />
       </div>
-      <button type="submit">Rechercher</button>
+      <button type="submit" onClick={e => props.submit(e)}>
+        Rechercher
+      </button>
     </form>
   );
 };

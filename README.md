@@ -1,6 +1,7 @@
 # Project
 
 WIP fell free to contribute if you wish to rescue my CSS 😂
+
 React app 'leboncoin'
 CI with Netlify >> https://good-deal.netlify.com/
 

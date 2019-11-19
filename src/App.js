@@ -8,6 +8,7 @@ import Modal from "./components/login/modal";
 import SignUp from "./containers/signup";
 import Spinner from "./components/spinner";
 import Cookies from "js-cookie";
+
 // Lazy import of Offer component
 const Offer = lazy(() => import("./containers/offer"));
 // No need to use context since we use cookies
@@ -89,4 +90,5 @@ const App = () => {
     </Router>
   );
 };
+
 export default App;

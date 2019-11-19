@@ -9,16 +9,16 @@ const Offer = () => {
   const [offer, setOffer] = useState({});
   const [loading, setLoading] = useState(true);
 
-  // TODO handle HTTP request errors TRY/ CATCH and handling unauthorized status
-
   useEffect(() => {
     const fetchingOfferData = async () => {
       const url = `https://leboncoin-api.herokuapp.com/api/offer/` + id;
-      const res = await axios.get(url);
-      setOffer(res.data);
-      setLoading(false);
-      console.log(res.data);
-      console.log(res.data.title);
+      try {
+        const res = await axios.get(url);
+        setOffer(res.data);
+        setLoading(false);
+      } catch (err) {
+        console.log(err.message);
+      }
     };
     fetchingOfferData();
   }, []);
