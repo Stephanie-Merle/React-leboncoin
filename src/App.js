@@ -10,18 +10,21 @@ import Spinner from "./components/spinner";
 import Cookies from "js-cookie";
 // Lazy import of Offer component
 const Offer = lazy(() => import("./containers/offer"));
-// Using context for authentication status?
-//import { BasketProvider } from "./context/context";
-// <BasketProvider /> <BasketConsumer />
+// No need to use context since we use cookies
 
 const App = () => {
   const [showModal, setModal] = useState(false);
   // Get info if authenticated, Token / username / email
   const [user, setUser] = useState();
+  let getUserName = Cookies.get("username");
 
   useEffect(() => {
+    // check if cookie already existing
+    if (getUserName) {
+      console.log("cookie existing");
+    }
     // If authenticated storing information in a cookie
-    if (user) {
+    else if (user) {
       const token = user.token;
       const username = user.account.username;
       const email = user.email;
@@ -41,7 +44,7 @@ const App = () => {
   return (
     <Router>
       {showModal ? <Modal action={setModal} user={setUser} /> : null}
-      <Navbar action={setModal} user={user} close={endConnection} />
+      <Navbar action={setModal} close={endConnection} />
       <div>
         <Switch>
           <Route path="/offers" component={Offers} />
@@ -54,7 +57,9 @@ const App = () => {
               </Suspense>
             )}
           />
-          <Route path="/signup" component={SignUp} />
+          <Route path="/signup">
+            <SignUp user={setUser} />
+          </Route>
           <Route path="/" component={Offers} />
         </Switch>
       </div>

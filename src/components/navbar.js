@@ -4,8 +4,11 @@ import Logo from "../assets/Logo.svg";
 import Plus from "./btn-plus";
 import SearchIcon from "./search-icon";
 import Login from "../assets/login.svg";
+import Cookies from "js-cookie";
 
 const Navbar = props => {
+  let userName = Cookies.get("username");
+  let connected = Cookies.get("token");
   return (
     <div className="header">
       <img src={Logo} alt="le bon coin logo" />
@@ -21,11 +24,11 @@ const Navbar = props => {
             <SearchIcon />
             Rechercher
           </div>
-          {props.user ? "Bonjour " + props.user.account.username : null}
+          {connected ? "Bonjour " + userName : null}
         </Link>
         <div className="btn-login">
           <img src={Login} alt="login" />
-          {props.user ? (
+          {connected ? (
             <button
               onClick={() => {
                 props.close();

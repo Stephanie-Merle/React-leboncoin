@@ -1,14 +1,15 @@
-// import React, { useState, useEffect } from "react";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/spinner";
 import CardDetail from "../components/card-detail";
 
-const Offer = props => {
+const Offer = () => {
   const { id } = useParams();
   const [offer, setOffer] = useState({});
   const [loading, setLoading] = useState(true);
+
+  // TODO handle HTTP request errors TRY/ CATCH and handling unauthorized status
 
   useEffect(() => {
     const fetchingOfferData = async () => {
@@ -21,7 +22,9 @@ const Offer = props => {
     };
     fetchingOfferData();
   }, []);
+
   // TODO CSS of the cart, and get props from the page offers
+
   return (
     <div className="offers">
       <div className="orange-header" />

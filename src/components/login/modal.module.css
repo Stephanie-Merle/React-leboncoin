@@ -1,7 +1,6 @@
 .modal {
-  position: absolute;
+  position: fixed;
   z-index: 700;
-
   background-color: rgb(255, 255, 255);
   width: 700px;
   height: 500px;
