@@ -2,12 +2,13 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import "./reset.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
+import Navbar from "./components/layout/navbar";
 import Offers from "./containers/offers";
 import Modal from "./components/login/modal";
 import SignUp from "./containers/signup";
 import Spinner from "./components/spinner";
 import Cookies from "js-cookie";
+import PostOffer from "./containers/post-offer";
 
 // Lazy import of Offer component
 const Offer = lazy(() => import("./containers/offer"));
@@ -46,7 +47,7 @@ const App = () => {
     <Router>
       {showModal ? <Modal action={setModal} user={setUser} /> : null}
       <Navbar action={setModal} close={endConnection} />
-      <div>
+      <main>
         <Switch>
           <Route path="/offers" component={Offers} />
           <Route
@@ -61,9 +62,11 @@ const App = () => {
           <Route path="/signup">
             <SignUp user={setUser} />
           </Route>
+          <Route path="/post-offer" component={PostOffer} />
           <Route path="/" component={Offers} />
         </Switch>
-      </div>
+      </main>
+
       <footer>
         <p>
           Made with love{" "}

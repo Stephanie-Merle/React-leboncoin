@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Style from "./signup.module.css";
 import axios from "axios";
-import SignupCard from "../components/signup-card";
-
-// TODO add a confirmation message of sign up with click to back to main page (useHistory)
-// TODO handle HTTP request errors
+import SignupCard from "../components/login/signup-card";
 
 const SignUp = props => {
   const initState = {
@@ -134,5 +131,5 @@ const SignUp = props => {
     </div>
   );
 };
-
+// possibility to use checked={..} instead of value, then event.target.checked
 export default SignUp;

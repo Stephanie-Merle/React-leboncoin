@@ -47,6 +47,7 @@
 }
 .btnWhite {
   composes: btn;
+  width: 200px;
   border: 1px solid blue;
   color: blue;
   background-color: white;
