@@ -27,21 +27,13 @@ const Offer = () => {
 
   return (
     <div className="offers">
-      <div className="orange-header" />
-      <div className="offer-details">
-        {loading ? (
-          <Spinner />
-        ) : (
-          <>
-            <CardDetail {...offer} />{" "}
-            <p className="description">{offer.description}</p>
-            <div className="cart boxShadow">
-              <p>{offer.creator.account.username}</p>
-              <button className="btn-post">Buy me</button>
-            </div>
-          </>
-        )}
-      </div>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          <CardDetail {...offer} />{" "}
+        </>
+      )}
     </div>
   );
 };

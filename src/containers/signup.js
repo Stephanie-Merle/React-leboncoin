@@ -131,5 +131,5 @@ const SignUp = props => {
     </div>
   );
 };
-
+// possibility to use checked={..} instead of value, then event.target.checked
 export default SignUp;
