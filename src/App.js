@@ -8,6 +8,7 @@ import Modal from "./components/login/modal";
 import SignUp from "./containers/signup";
 import Spinner from "./components/spinner";
 import Cookies from "js-cookie";
+import PostOffer from "./containers/post-offer";
 
 // Lazy import of Offer component
 const Offer = lazy(() => import("./containers/offer"));
@@ -46,23 +47,25 @@ const App = () => {
     <Router>
       {showModal ? <Modal action={setModal} user={setUser} /> : null}
       <Navbar action={setModal} close={endConnection} />
-
-      <Switch>
-        <Route path="/offers" component={Offers} />
-        <Route
-          path="/offer/:id"
-          render={() => (
-            <Suspense fallback={Spinner}>
-              {" "}
-              <Offer />{" "}
-            </Suspense>
-          )}
-        />
-        <Route path="/signup">
-          <SignUp user={setUser} />
-        </Route>
-        <Route path="/" component={Offers} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/offers" component={Offers} />
+          <Route
+            path="/offer/:id"
+            render={() => (
+              <Suspense fallback={Spinner}>
+                {" "}
+                <Offer />{" "}
+              </Suspense>
+            )}
+          />
+          <Route path="/signup">
+            <SignUp user={setUser} />
+          </Route>
+          <Route path="/post-offer" component={PostOffer} />
+          <Route path="/" component={Offers} />
+        </Switch>
+      </main>
 
       <footer>
         <p>

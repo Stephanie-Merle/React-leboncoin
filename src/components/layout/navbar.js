@@ -1,9 +1,6 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-import Plus from "../btn-plus";
-import SearchIcon from "../search-icon";
-import Login from "../../assets/login.svg";
 import Cookies from "js-cookie";
 import Style from "./navbar.module.css";
 import {
@@ -21,7 +18,7 @@ const Navbar = props => {
         <img src={Logo} alt="le bon coin logo" />
       </Link>
       <nav>
-        <Link to="/">
+        <Link to="/post-offer">
           <div className="btnPost">
             <AddBoxOutlined /> Déposer une annonce
           </div>

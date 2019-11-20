@@ -1,12 +1,12 @@
 import React from "react";
-import SearchIcon from "./search-icon";
 import Style from "./search-box.module.css";
+import { SearchOutlined } from "@material-ui/icons";
 
 const SearchBox = props => {
   return (
     <form className={Style.searchBox}>
       <div className={Style.input}>
-        <SearchIcon />
+        <SearchOutlined />
         <input
           type="text"
           placeholder="Que recherchez-vous?"

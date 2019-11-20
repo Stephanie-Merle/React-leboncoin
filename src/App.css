@@ -8,7 +8,9 @@ body {
   background-color: #fafafa;
   font-family: "Roboto", sans-serif;
 }
-
+main {
+  min-height: calc(100vh - 60px - 60px);
+}
 .offers .orange-header {
   position: absolute;
   background-color: #f56b2a;
