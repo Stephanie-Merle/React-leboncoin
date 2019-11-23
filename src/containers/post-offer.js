@@ -17,27 +17,38 @@ const PostOffer = () => {
 
   const handlePost = async e => {
     e.preventDefault();
-    setLoading(true);
-    const token = Cookies.get("token");
-    // using FormData since uploading picture(s) as well
-    const data = new FormData();
-    data.append("title", dataState.title);
-    data.append("description", dataState.description);
-    data.append("price", dataState.price);
-    data.append("files", dataState.file);
-    // Sending our post with our token in headers, Bearer
-    const res = await axios.post(
-      "http://localhost:4000/api/offer/publish",
-      data,
-      {
-        headers: {
-          Authorization: "Bearer " + token
-        }
+    try {
+      setLoading(true);
+      const token = Cookies.get("token");
+      if (token) {
+        // using FormData since uploading picture(s) as well
+        const data = new FormData();
+        data.append("title", dataState.title);
+        data.append("description", dataState.description);
+        data.append("price", dataState.price);
+        data.append("files", dataState.file);
+        // Sending our post with our token in headers, Bearer
+        const res = await axios.post(
+          "http://localhost:4000/api/offer/publish",
+          data,
+          {
+            headers: {
+              Authorization: "Bearer " + token
+            }
+          }
+        );
+        console.log(res.data);
+        setLoading(false);
+        alert("New offer recorded");
+      } else {
+        setLoading(false);
+        alert("Need to be authenticated");
       }
-    );
-    console.log(res.data);
-    setLoading(false);
-    alert("Annonce bien enregistree");
+    } catch (err) {
+      setLoading(false);
+      console.log(err.message);
+      alert("Error");
+    }
   };
   // using input type submit instead of
   return (

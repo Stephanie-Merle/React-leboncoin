@@ -11,10 +11,11 @@ const Offer = () => {
 
   useEffect(() => {
     const fetchingOfferData = async () => {
-      const url = `http://localhost:4000/api/offer/` + id;
+      const url = `http://localhost:4000/api/offer/?id=` + id;
       try {
         const res = await axios.get(url);
         setOffer(res.data);
+        console.log(res.data);
         setLoading(false);
       } catch (err) {
         console.log(err.message);
