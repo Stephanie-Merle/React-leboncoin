@@ -14,8 +14,8 @@ const Offers = () => {
   const limit = 5;
 
   const fetchingAllData = async () => {
-    let url = `https://leboncoin-api.herokuapp.com/api/offer/with-count`;
-    const res = await axios.get(url);
+    let url = `http://localhost:4000/api/offer/with-count`;
+    const res = await axios.post(url);
     setResults(res.data.offers);
   };
   useEffect(() => {
@@ -23,9 +23,9 @@ const Offers = () => {
   }, []);
   const fetchingData = async () => {
     let n = limit * (counter - 1);
-    let url = `https://leboncoin-api.herokuapp.com/api/offer/with-count?skip=${n}&limit=${limit}`;
+    let url = `http://localhost:4000/api/offer/with-count?skip=${n}&limit=${limit}`;
     try {
-      const res = await axios.get(url);
+      const res = await axios.post(url);
       setData(res.data.offers);
       setLoading(false);
     } catch (err) {

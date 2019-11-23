@@ -26,14 +26,11 @@ const SignUp = props => {
 
   const handleSubscription = async () => {
     try {
-      const res = await axios.post(
-        "https://leboncoin-api.herokuapp.com/api/user/sign_up",
-        {
-          email: input.email,
-          username: input.name,
-          password: input.password1
-        }
-      );
+      const res = await axios.post(`http://localhost:4000/user/sign_up`, {
+        email: input.email,
+        username: input.name,
+        password: input.password1
+      });
       alert("Vous avez ete enregistre, vous pouvez maintenant vous connecter");
       // redirecting to main page
       return history.push("/offers");

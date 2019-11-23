@@ -14,13 +14,10 @@ const Modal = props => {
 
   const userLogin = async () => {
     try {
-      const res = await Axios.post(
-        "https://leboncoin-api.herokuapp.com/api/user/log_in",
-        {
-          email: inputState.email,
-          password: inputState.password
-        }
-      );
+      const res = await Axios.post("http://localhost:4000/user/log_in", {
+        email: inputState.email,
+        password: inputState.password
+      });
       props.user(res.data);
       props.action(false);
     } catch (err) {
