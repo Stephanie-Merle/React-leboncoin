@@ -1,20 +1,19 @@
 # Fullstack Project with REACT and Node.js
 
 CI with Netlify >> https://good-deal.netlify.com/
+<div style="display:flex; margin:auto">
+<img src="./src/assets/Screenshot 2019-12-24 at 16.14.54.png" align="center" width="100%" height="100%" title="wide-screen">
+</div>
 
 React website clone 'leboncoin' with authentication.<BR/>
 User can search and post offers, upload of pictures with cloudinary.<BR/>
 Results with paging for the offers fetched.
 
 <div style="display:flex; margin:auto">
-
-<img src="./src/assets/Screenshot 2019-12-24 at 16.14.54.png" width="100%" height="100%" title="wide-screen">
-<div width="100%" height="40px" />
-<img src="./src/assets/Screenshot 2019-12-24 at 16.15.24.png" width="100%" height="100%" title="wide-screen">
-
+<img src="./src/assets/Screenshot 2019-12-24 at 16.15.24.png" align="center" width="100%" height="100%" title="wide-screen">
 </div>
----
 
+---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
