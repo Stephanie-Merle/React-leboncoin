@@ -6,7 +6,13 @@ React website clone 'leboncoin' with authentication.
 User can search and post offers, upload of pictures with cloudinary.
 Results with paging for the offers fetched.
 
+<div style="display:flex; margin:auto">
 
+<img src="./src/assets/Screenshot 2019-12-24 at 16.14.54.png" width="100%" height="100%" title="wide-screen">
+
+<img src="./src/assets/Screenshot 2019-12-24 at 16.15.24.png" width="100%" height="100%" title="wide-screen">
+
+</div>
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
