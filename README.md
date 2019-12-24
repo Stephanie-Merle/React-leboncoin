@@ -1,9 +1,11 @@
-# Project
+# Fullstack Project with REACT and Node.js
 
-WIP fell free to contribute if you wish to rescue my CSS 😂
-
-React app 'leboncoin'
 CI with Netlify >> https://good-deal.netlify.com/
+
+React website clone 'leboncoin' with authentication.
+User can search and post offers, upload of pictures with cloudinary.
+Results with paging for the offers fetched.
+
 
 ---
 
