@@ -1,8 +1,15 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .flexWrapper {
-  justify-content: center;
-  display: inline-flex;
+	justify-content: center;
+	display: inline-flex;
+}
+@media (max-width: 900px) {
+	.flexWrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
 }

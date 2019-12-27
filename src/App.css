@@ -89,3 +89,12 @@ footer p {
 	margin: auto;
 	vertical-align: middle;
 }
+@media (max-width: 900px) {
+	footer p {
+		padding-top: 10px;
+		font-size: .6rem;
+	}
+	footer {
+		height: 30px;
+	}
+}
