@@ -1,47 +1,121 @@
 .header {
-  position: relative;
-  height: 60px;
-  justify-content: flex-start;
-  align-content: center;
-  display: flex;
-  padding-left: 15%;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.335);
-  z-index: 100;
+	position: relative;
+	height: 60px;
+	justify-content: flex-start;
+	align-content: center;
+	display: flex;
+	padding-left: 15%;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.335);
+	z-index: 100;
 }
 .header nav {
-  display: inline-flex;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  justify-content: flex-start;
+	display: inline-flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	justify-content: flex-start;
 }
 .header a {
-  display: inline;
-  text-decoration: none;
-  vertical-align: middle;
-  text-align: center;
-  color: inherit;
+	display: inline;
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	color: inherit;
 }
 .header img {
-  image-rendering: optimizeSpeed;
-  height: 60px;
-}
-
-.btnSearch {
-  display: inline-flex;
-  margin: 0.5em auto;
-  align-self: flex-end;
-  padding: 0.5em;
-}
-.btnSearch svg {
-  margin-right: 0.3em;
+	image-rendering: optimizeSpeed;
+	height: 60px;
 }
 .btnLogin {
-  display: flex;
-  margin-left: 10em;
-  padding: 0.2em;
-  flex-direction: column;
-  justify-content: flex-end;
+	display: flex;
+	margin-left: 10em;
+	padding: 0.2em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+.greeting {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btnPost {
+	display: inline-flex;
+	background-color: #f56b2a;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 700;
+	width: fit-content;
+	min-width: 190px;
+	height: 45px;
+	border-radius: 0.2em;
+	padding: 0 0.4em;
+	margin: 0.6em 2em;
+	align-self: center;
+}
+@media (max-width: 1200px) {
+	.greeting {
+		display: none;
+	}
+}
+@media (max-width: 900px) {
+	.header img {
+		image-rendering: optimizeSpeed;
+		height: 40px;
+	}
+	.header {
+		height: 40px;
+		padding-left: 5%;
+		width: 100%;
+	}
+	.btnPost {
+		font-weight: 400;
+		width: fit-content;
+		min-width: 190px;
+		height: 25px;
+		border-radius: 0.2em;
+		padding: 0 0.4em;
+		margin-right: 1em;
+		align-self: center;
+	}
+	.btnLogin {
+		padding-right: 1em;
+		margin: auto;
+		flex-direction: row;
+	}
+}
+@media (max-width: 600px) {
+	.header nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100vw;
+		flex: 1;
+		padding: none;
+		background-color: white;
+	}
+	.header {
+		height: 40px;
+		width: 100%;
+		margin: none;
+		flex: 1;
+		box-shadow: none;
+	}
+	.header img {
+		image-rendering: optimizeSpeed;
+		height: 40px;
+	}
+	nav {
+		flex: 1;
+	}
+	.header a {
+		background-color: white;
+		height: 40px;
+		align-items: center;
+		justify-content: flex-start;
+	}
 }

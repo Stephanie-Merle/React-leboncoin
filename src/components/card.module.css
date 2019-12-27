@@ -1,31 +1,55 @@
 .card {
-  display: flex;
-  width: 60%;
-  height: 160px;
-  background-color: white;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
-  margin: 1em auto;
+	display: flex;
+	width: 60%;
+	min-width: 350px;
+	height: 160px;
+	background-color: white;
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
+	margin: 1em auto;
 }
 .card .img {
-  width: 200px;
-  height: 160px;
-  display: inline-flex;
-  background-color: #cad1d9;
+	width: 200px;
+	height: 160px;
+	display: inline-flex;
+	background-color: #cad1d9;
 }
 .card img {
-  height: 160px;
-  width: 200px;
-  object-fit: contain;
-  display: inline-flex;
+	height: 160px;
+	width: 200px;
+	object-fit: contain;
+	display: inline-flex;
 }
 .cardInfo {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3em 1em;
-  justify-content: space-between;
-  margin: 1em;
+	display: flex;
+	flex-direction: column;
+	padding: 0.3em 1em;
+	justify-content: space-between;
+	margin: 1em;
 }
 .cardInfo div p:nth-child(2) {
-  color: #f56b2a;
-  margin-top: 1em;
+	color: #f56b2a;
+	margin-top: 1em;
+}
+@media (max-width: 600px) {
+	.card {
+		display: flex;
+		min-width: 250px;
+		height: 100px;
+		background-color: white;
+		box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
+		margin: .3em auto;
+	}
+	.card .img {
+		width: 100px;
+		height: 100px;
+	}
+	.card img {
+		height: 100px;
+		width: 100px;
+	}
+	.cardInfo {
+		padding: 0.2em .5em;
+		margin: .2em;
+		font-size: .8rem;
+	}
 }
