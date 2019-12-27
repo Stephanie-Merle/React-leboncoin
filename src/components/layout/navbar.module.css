@@ -4,7 +4,6 @@
 	justify-content: flex-start;
 	align-content: center;
 	display: flex;
-	padding-left: 15%;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.335);
@@ -27,6 +26,7 @@
 .header img {
 	image-rendering: optimizeSpeed;
 	height: 60px;
+	margin-left: 2em;
 }
 .btnLogin {
 	display: flex;
