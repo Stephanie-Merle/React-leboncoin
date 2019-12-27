@@ -118,4 +118,8 @@
 		align-items: center;
 		justify-content: flex-start;
 	}
+	.btnLogin {
+		margin-top: 1em;
+		padding: none;
+	}
 }

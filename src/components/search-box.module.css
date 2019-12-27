@@ -1,50 +1,59 @@
 .searchBox {
-  position: relative;
-  display: flex;
-  background-color: #ffffff;
-  height: 130px;
-  width: 50%;
-  min-width: 500px;
-  z-index: 200;
-  margin: 2.2em auto;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.3em;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
+	position: relative;
+	display: flex;
+	background-color: #ffffff;
+	height: 130px;
+	width: 50%;
+	min-width: 500px;
+	z-index: 200;
+	margin: 2.2em auto;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.3em;
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.198);
 }
 .searchBox .input {
-  height: fit-content;
-  width: 40%;
-  min-width: 300px;
-  background-color: #f4f6f7;
-  color: grey;
-  margin: auto 1em;
-  border: none;
-  vertical-align: center;
+	height: fit-content;
+	width: 40%;
+	min-width: 300px;
+	background-color: #f4f6f7;
+	color: grey;
+	margin: auto 1em;
+	border: none;
+	vertical-align: center;
 }
 .searchBox svg {
-  vertical-align: center;
-  align-self: center;
-  padding: 0 0.5em;
+	vertical-align: center;
+	align-self: center;
+	padding: 0 0.5em;
 }
 .searchBox input {
-  display: inline-flex;
-  height: 40px;
-  width: 70%;
-  border: none;
-  background-color: inherit;
-  text-align: center;
-  margin: 0 1em;
-  font-size: 1rem;
-  outline: none;
+	display: inline-flex;
+	height: 40px;
+	width: 70%;
+	border: none;
+	background-color: inherit;
+	text-align: center;
+	margin: 0 1em;
+	font-size: 1rem;
+	outline: none;
 }
 .searchBox button {
-  background-color: #4183d7;
-  height: 40px;
-  padding: 0.7em;
-  width: 15%;
-  min-width: 100px;
-  border-radius: 0.2em;
-  color: white;
-  margin: auto 1em;
+	background-color: #4183d7;
+	height: 40px;
+	padding: 0.7em;
+	width: 15%;
+	min-width: 100px;
+	border-radius: 0.2em;
+	color: white;
+	margin: auto 1em;
+}
+@media (max-width: 900px) {
+	.searchBox {
+		height: 130px;
+		width: 80%;
+		min-width: 350px;
+		display: flex;
+		flex-direction: column;
+	}
 }
