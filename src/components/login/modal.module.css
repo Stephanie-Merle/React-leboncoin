@@ -1,77 +1,92 @@
 .modal {
-  position: fixed;
-  z-index: 700;
-  background-color: rgb(255, 255, 255);
-  width: 700px;
-  height: 500px;
-  left: calc(50% - 350px);
-  top: 200px;
+	position: fixed;
+	z-index: 700;
+	background-color: rgb(255, 255, 255);
+	width: 700px;
+	height: 500px;
+	left: calc(50% - 350px);
+	top: 200px;
 }
 .modal p,
 .modal div,
 .modal button {
-  margin: 1em auto;
-  width: 70%;
+	margin: 1em auto;
+	width: 70%;
 }
 .modal div {
-  border: 1px solid grey;
-  border-radius: 0.2em;
+	border: 1px solid grey;
+	border-radius: 0.2em;
 }
 .modal input {
-  height: 44px;
-  width: calc(100% - 20px);
-  background-color: transparent;
-  border: none;
-  margin: none auto;
-  padding-left: 20px;
+	height: 44px;
+	width: calc(100% - 20px);
+	background-color: transparent;
+	border: none;
+	margin: none auto;
+	padding-left: 20px;
 }
 .btn {
-  display: flex;
-  font-weight: 700;
-  width: fit-content;
-  min-width: 190px;
-  height: 44px;
-  border-radius: 0.2em;
-  padding: 0 0.4em;
-  margin: 0.6em 2em;
+	display: flex;
+	font-weight: 700;
+	width: fit-content;
+	min-width: 190px;
+	height: 44px;
+	border-radius: 0.2em;
+	padding: 0 0.4em;
+	margin: 0.6em 2em;
 }
 .btnBlue p {
-  margin: auto;
-  text-align: center;
+	margin: auto;
+	text-align: center;
 }
 .btnBlue {
-  composes: btn;
-  border: 1px solid blue;
-  color: white;
-  background-color: blue;
+	composes: btn;
+	border: 1px solid blue;
+	color: white;
+	background-color: blue;
 }
 .btnWhite {
-  composes: btn;
-  width: 200px;
-  border: 1px solid blue;
-  color: blue;
-  background-color: white;
+	composes: btn;
+	width: 200px;
+	border: 1px solid blue;
+	color: blue;
+	background-color: white;
 }
 .modal hr {
-  width: 60%;
-  border-top: 2.5px solid rgb(255, 94, 0);
+	width: 60%;
+	border-top: 2.5px solid rgb(255, 94, 0);
 }
 .modal form hr {
-  width: 99%;
-  border-top: 0.3px rgb(206, 205, 205) solid;
+	width: 99%;
+	border-top: 0.3px rgb(206, 205, 205) solid;
 }
 .title {
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-align: center;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-align: center;
 }
 .modal a {
-  justify-content: center;
-  margin: auto;
-  align-items: center;
-  text-decoration: none;
+	justify-content: center;
+	margin: auto;
+	align-items: center;
+	text-decoration: none;
 }
 .noAccount {
-  justify-content: center;
-  text-align: center;
+	justify-content: center;
+	text-align: center;
+}
+@media (max-width: 600px) {
+	.modal {
+		width: 350px;
+		height: fit-content;
+		left: calc((100% - 350px)/2);
+		top: 50px;
+		padding: .8em;
+	}
+	.modal p,
+	.modal div,
+	.modal button {
+		margin: .5em auto;
+		width: 70%;
+	}
 }

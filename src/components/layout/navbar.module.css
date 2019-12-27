@@ -57,6 +57,7 @@
 	margin: 0.6em 2em;
 	align-self: center;
 }
+
 @media (max-width: 1200px) {
 	.greeting {
 		display: none;
@@ -75,7 +76,7 @@
 	.btnPost {
 		font-weight: 400;
 		width: fit-content;
-		min-width: 190px;
+		min-width: 170px;
 		height: 25px;
 		border-radius: 0.2em;
 		padding: 0 0.4em;
@@ -93,7 +94,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		width: 100vw;
+
 		flex: 1;
 		padding: none;
 		background-color: white;
@@ -102,15 +103,11 @@
 		height: 40px;
 		width: 100%;
 		margin: none;
-		flex: 1;
 		box-shadow: none;
 	}
 	.header img {
 		image-rendering: optimizeSpeed;
 		height: 40px;
-	}
-	nav {
-		flex: 1;
 	}
 	.header a {
 		background-color: white;
@@ -121,5 +118,8 @@
 	.btnLogin {
 		margin-top: 1em;
 		padding: none;
+	}
+	.btnPost {
+		margin-left: .2em;
 	}
 }
